@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <link rel="icon" type="image/svg+xml" href="https://lucide.dev/favicon.ico" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Will you be my Valentine?</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;700&family=Nunito:wght@400;600;700;800&display=swap"
+    rel="stylesheet">
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: {
+            'hand': ['"Dancing Script"', 'cursive'],
+            'sans': ['"Nunito"', 'sans-serif'],
+          },
+          colors: {
+            valentine: {
+              50: 'var(--val-50)',
+              100: 'var(--val-100)',
+              200: 'var(--val-200)',
+              300: 'var(--val-300)',
+              400: 'var(--val-400)',
+              500: 'var(--val-500)',
+              600: 'var(--val-600)',
+              700: 'var(--val-700)',
+              800: 'var(--val-800)',
+              900: 'var(--val-900)',
+              950: 'var(--val-950)',
+            }
+          },
+          animation: {
+            'float': 'float 6s ease-in-out infinite',
+            'float-slow': 'float 12s ease-in-out infinite',
+            'pulse-fast': 'pulse 1.5s cubic-bezier(0.4, 0, 0.6, 1) infinite',
+            'pulse-slow': 'pulse 3s cubic-bezier(0.4, 0, 0.6, 1) infinite',
+            'fade-in-scale': 'fadeInScale 0.6s cubic-bezier(0.16, 1, 0.3, 1) forwards',
+            'shake': 'shake 0.5s cubic-bezier(.36,.07,.19,.97) both',
+            'blob': 'blob 7s infinite',
+            'blob-slow': 'blob 20s infinite',
+            'blob-reverse': 'blob-reverse 25s infinite',
+            'glow': 'glow 2s ease-in-out infinite alternate',
+            'gradient-x': 'gradient-x 15s ease infinite',
+          },
+          keyframes: {
+            float: {
+              '0%, 100%': { transform: 'translateY(0)' },
+              '50%': { transform: 'translateY(-20px)' },
+            },
+            fadeInScale: {
+              '0%': { opacity: '0', transform: 'scale(0.9) translateY(20px)' },
+              '100%': { opacity: '1', transform: 'scale(1) translateY(0)' },
+            },
+            shake: {
+              '10%, 90%': { transform: 'translate3d(-1px, 0, 0)' },
+              '20%, 80%': { transform: 'translate3d(2px, 0, 0)' },
+              '30%, 50%, 70%': { transform: 'translate3d(-4px, 0, 0)' },
+              '40%, 60%': { transform: 'translate3d(4px, 0, 0)' }
+            },
+            blob: {
+              '0%': { transform: 'translate(0px, 0px) scale(1)' },
+              '33%': { transform: 'translate(30px, -50px) scale(1.1)' },
+              '66%': { transform: 'translate(-20px, 20px) scale(0.9)' },
+              '100%': { transform: 'translate(0px, 0px) scale(1)' },
+            },
+            'blob-reverse': {
+              '0%': { transform: 'translate(0px, 0px) scale(1)' },
+              '33%': { transform: 'translate(-30px, 50px) scale(1.1)' },
+              '66%': { transform: 'translate(20px, -20px) scale(0.9)' },
+              '100%': { transform: 'translate(0px, 0px) scale(1)' },
+            },
+            glow: {
+              'from': { boxShadow: '0 0 10px rgba(236,72,153,0.5)' },
+              'to': { boxShadow: '0 0 30px rgba(236,72,153,0.8), 0 0 15px rgba(236,72,153,0.5)' }
+            },
+            'gradient-x': {
+              '0%, 100%': {
+                'background-size': '200% 200%',
+                'background-position': 'left center'
+              },
+              '50%': {
+                'background-size': '200% 200%',
+                'background-position': 'right center'
+              },
+            }
+          }
+        }
+      }
+    }
+  </script>
+</head>
+
+<body>
+  <div id="root"></div>
+  <script type="module" src="/index.tsx"></script>
+</body>
+
+</html>

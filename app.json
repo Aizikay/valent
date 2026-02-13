@@ -1,0 +1,20 @@
+{
+    "name": "be-my-valentine",
+    "description": "A romantic digital experience designed to express love and share custom Valentine messages.",
+    "repository": "https://github.com/aizikay/be-my-valentine",
+    "keywords": [
+        "valentine",
+        "react",
+        "vite",
+        "romantic"
+    ],
+    "env": {
+        "NODE_ENV": {
+            "description": "Environment for the application",
+            "value": "production"
+        }
+    },
+    "scripts": {
+        "postinstall": "npm run build"
+    }
+}
